@@ -6,7 +6,7 @@
 
 contract MetaCoin {
   address public owner;
-	mapping (bytes32 => uint) public balances;
+  mapping (bytes32 => uint) public balances;
 
   function MetaCoin(){
     owner = msg.sender;
