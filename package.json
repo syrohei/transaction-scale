@@ -1,0 +1,26 @@
+{
+  "name": "transaction-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syrohei/transaction-scale.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syrohei/transaction-scale/issues"
+  },
+  "homepage": "https://github.com/syrohei/transaction-scale#readme",
+  "dependencies": {
+    "ethereumjs-testrpc": "^2.0.9",
+    "truffle": "^1.0.3"
+  }
+}

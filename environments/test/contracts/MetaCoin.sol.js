@@ -8,7 +8,7 @@
     abi: [{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"balances","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"target","type":"bytes32"},{"name":"amount","type":"uint256"}],"name":"register","outputs":[{"name":"","type":"bool"}],"type":"function"},{"inputs":[],"type":"constructor"}],
     binary: "606060405260008054600160a060020a0319163317905560878060226000396000f3606060405260e060020a60003504638909aa3f8114602e5780638da5cb5b146045578063ff3617f8146063575b005b607d60043560016020526000908152604090205481565b607d60005473ffffffffffffffffffffffffffffffffffffffff1681565b600435600090815260016020819052604090912060243590555b6060908152602090f3",
     unlinked_binary: "606060405260008054600160a060020a0319163317905560878060226000396000f3606060405260e060020a60003504638909aa3f8114602e5780638da5cb5b146045578063ff3617f8146063575b005b607d60043560016020526000908152604090205481565b607d60005473ffffffffffffffffffffffffffffffffffffffff1681565b600435600090815260016020819052604090912060243590555b6060908152602090f3",
-    address: "0x6d5ee81a7141d5bca91bedc38af603ea390048d7",
+    address: "0x96be4d225459b1e7d8dabdab7e9965a6c2f11162",
     generated_with: "2.0.9",
     contract_name: "MetaCoin"
   };
