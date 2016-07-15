@@ -23,6 +23,7 @@ contract('MetaCoin', function(accounts) {
       console.log(`second step is started...`)
       async(resend, 0, [],[], meta, function(resend){
         console.log(`second step is ${resend.length/length}`)
+        console.log(`third step is started...`)
         async(resend, 0, [], [],  meta, function(resend){
           console.log(`third step is ${resend.length/length}`)
           done()
@@ -77,7 +78,7 @@ function async(array, max, mined, back, meta, cb){
   
   meta.register(String(v.data), Number(v.amount)).then(function(tx) {
     //if transactions were mined, push the transaction to array
-    meta.balances.call(String(v.data)).then(function(balance) {
+    meta.balances(String(v.data)).then(function(balance) {
       mined.push(v)
       console.log(`tx#${tx} target#${String(v.data)} set#${v.amount} return#${balance.toNumber()} count#${v.count} mine#${mined.length} back#${back.length} max#${max}`)
       if (v.amount !== balance.toNumber())
