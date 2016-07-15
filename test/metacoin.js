@@ -19,13 +19,13 @@ contract('MetaCoin', function(accounts) {
     */
     async(array, 0, mined, back, meta, function(resend){
 
-      console.log(`first step is ${Number(resend.length)/Number(length)}`)
+      console.log(`first step error count is ${Number(resend.length)}`)
       console.log(`second step is started...`)
       async(resend, 0, [],[], meta, function(resend){
-        console.log(`second step is ${resend.length/length}`)
+        console.log(`second step error count is ${resend.length}`)
         console.log(`third step is started...`)
         async(resend, 0, [], [],  meta, function(resend){
-          console.log(`third step is ${resend.length/length}`)
+          console.log(`third step error count is ${resend.length}`)
           done()
         })
       })
