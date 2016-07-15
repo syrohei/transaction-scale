@@ -1,5 +1,5 @@
 
-const value = 2000
+const value = 1200
 
 contract('MetaCoin', function(accounts) {
   it("should put 10000 MetaCoin in the first account", function(done) {
@@ -18,10 +18,15 @@ contract('MetaCoin', function(accounts) {
     })
     */
     async(array, 0, mined, back, meta, function(resend){
+      if (!resend.length)
+        done()
 
       console.log(`first step error count is ${Number(resend.length)}`)
       console.log(`second step is started...`)
       async(resend, 0, [],[], meta, function(resend){
+        if (!resend.length)
+          done()
+
         console.log(`second step error count is ${resend.length}`)
         console.log(`third step is started...`)
         async(resend, 0, [], [],  meta, function(resend){
@@ -80,9 +85,12 @@ function async(array, max, mined, back, meta, cb){
     //if transactions were mined, push the transaction to array
     meta.balances(String(v.data)).then(function(balance) {
       mined.push(v)
-      console.log(`tx#${tx} target#${String(v.data)} set#${v.amount} return#${balance.toNumber()} count#${v.count} mine#${mined.length} back#${back.length} max#${max}`)
-      if (v.amount !== balance.toNumber())
-        back.push({ data: v.data, amount: v.amount, count: v.count})
+      if (v.amount !== balance.toNumber()){
+
+        const amount = Math.round(Math.random()*100)
+        back.push({ data: v.data, amount: amount, count: v.count})
+      }
+      console.log(`tx#${tx} target#${String(v.data)} set#${v.amount} return#${balance.toNumber()} count#${v.count} mine#${mined.length} error#${back.length} max#${max}`)
 
       if (mined.length == max)
         return cb(back )
