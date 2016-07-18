@@ -1,6 +1,6 @@
 
 const value = 1200
-const delay_time = 4
+const delay_time = 0
 
 contract('MetaCoin', function(accounts) {
   it("should no error of hyper sending transactions with delay", function(done) {
